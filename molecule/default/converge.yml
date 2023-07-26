@@ -1,0 +1,5 @@
+---
+- name: "Include tool.bootstrap_playbook playbook"
+  tags:
+      - "tool.bootstrap_playbook"
+  ansible.builtin.import_playbook: "../../playbook.yml"
