@@ -103,113 +103,29 @@ molecule test
 
 ## Installation
 
-To install this role, just copy/import this role or raw file into your fresh playbook repository or call it with the "include_playbook/import_playbook" module.
+To install this playbook, just copy/import this playbook or raw file into your fresh playbook repository or call it with the "include_playbook/import_playbook" module.
 
 ## Usage
 
 ### Vars
 
-Some vars a required to run this role:
-
-```YAML
----
----
-# The current user and group to create file
-bootstrap_playbook_user: "root"
-# The base path on where you want your role
-bootstrap_playbook_base_path: "/root"
-
-# Your author name
-bootstrap_playbook_meta_author: "Lord Robin Crombez"
-# The namespace of your role
-bootstrap_playbook_meta_namespace: "labocbz"
-# The role name
-bootstrap_playbook_meta_playbook_name: "my_new_playbook"
-# The little description for the meta file and the readme
-bootstrap_playbook_meta_description: "This is a limited description for the meta."
-# Your compangy / lab name
-bootstrap_playbook_meta_company: "Labo-CBZ"
-# The licence you wanna put on it (MIT file imported)
-bootstrap_playbook_meta_license: "MIT"
-# Some tags you want to put in plus of the base one
-bootstrap_playbook_tags:
-  - "UNIX"
-
-# The driver you use for molecule
-bootstrap_playbook_molecule_driver: "docker"
-
-# The path of your future role
-bootstrap_playbook_path: "{{ bootstrap_playbook_base_path }}/{{ bootstrap_playbook_meta_namespace }}.{{ bootstrap_playbook_meta_playbook_name }}"
-
-# A list of folder to create
-bootstrap_playbook_folders:
-  - "defaults"
-  - "files"
-  - "handlers"
-  - "meta"
-  - "molecule"
-  - "molecule/default"
-  - "molecule/gitlabci"
-  - "tasks"
-  - "templates"
-  - "tests"
-  - "tests/tower"
-  - "tests/inventory"
-  - "tests/inventory/group_vars"
-  - "tests/inventory/host_vars"
-  - "tests/certs"
-  - "vars"
-
-# Some file to import in the root folder of the future role
-bootstrap_root_files:
-  - ".ansible-lint"
-  - ".ansible.cfg"
-  - ".yamllint"
-  - "CODEOWNERS"
-  - ".gitlab-ci.yml"
-```
-
-The best way is to modify these vars by copy the ./default/main.yml file into the ./vars and edit with your personnals requirements.
-
-You can set vars in the template model in Ansible AWX / Tower or just surchage them during the playbook call.
-
-In order to surchage vars, you have multiples possibilities but for mains cases you have to put vars in your inventory and/or on your AWX / Tower interface.
-
 ```YAML
 # From inventory
----
-inv_bootstrap_playbook_base_path: "/root"
-inv_bootstrap_playbook_meta_playbook_name: "my_new_playbook"
-inv_bootstrap_playbook_meta_namespace: "labocbz"
-inv_bootstrap_playbook_technologies:
-  - "UNIX"
-  - "Ansible"
-  - "Shell"
-  - "PHP"
 
 ```
 
 ```YAML
 # From AWX / Tower
 ---
-all vars from to put/from AWX / Tower
-```
-
-### Run
-
-To run this role, you can copy the molecule/default/converge.yml playbook and add it into your playbook:
-
-```YAML
-- name: "Include tool.bootstrap_playbook"
-  tags:
-    - "tool.bootstrap_playbook"
-  vars:
-    bootstrap_playbook_base_path: "{{ inv_bootstrap_playbook_base_path }}"
-    bootstrap_playbook_meta_playbook_name: "{{ inv_bootstrap_playbook_meta_playbook_name }}"
-    bootstrap_playbook_meta_namespace: "{{ inv_bootstrap_playbook_meta_namespace }}"
-    bootstrap_playbook_technologies: "{{ inv_bootstrap_playbook_technologies }}"
-  ansible.builtin.include_playbook:
-    name: "tool.bootstrap_playbook"
+input_bootstrap_playbook_base_path: "/root"
+input_bootstrap_playbook_meta_playbook_name: "my_new_playbook"
+input_bootstrap_playbook_meta_namespace: "labocbz"
+input_bootstrap_playbook_meta_company: "Labo-CBZ"
+input_bootstrap_playbook_tags:
+  - "UNIX"
+  - "Ansible"
+  - "Shell"
+  - "PHP"
 ```
 
 ## Architectural Decisions Records

@@ -3,7 +3,7 @@ input_bootstrap_playbook_base_path: "/root"
 input_bootstrap_playbook_meta_playbook_name: "my_new_playbook"
 input_bootstrap_playbook_meta_namespace: "labocbz"
 input_bootstrap_playbook_meta_company: "Labo-CBZ"
-input_bootstrap_playbook_technologies:
+input_bootstrap_playbook_tags:
   - "UNIX"
   - "Ansible"
   - "Shell"
