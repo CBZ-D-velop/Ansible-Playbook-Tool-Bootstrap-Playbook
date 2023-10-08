@@ -117,15 +117,23 @@ To install this playbook, just copy/import this playbook or raw file into your f
 ```YAML
 # From AWX / Tower
 ---
-input_bootstrap_playbook_base_path: "/root"
-input_bootstrap_playbook_meta_playbook_name: "my_new_playbook"
-input_bootstrap_playbook_meta_namespace: "labocbz"
+
+input_bootstrap_playbook_user: "lordrobincbz" # The user for the bootstrap playbook
+input_bootstrap_playbook_base_path: "../../bootstraped_playbooks" # The base path for the playbooks, relative to the playbook location
+
+input_bootstrap_playbook_meta_author: "Lord Robin Crombez" # The author of the bootstrap playbook
+input_bootstrap_playbook_meta_namespace: "tool" # The namespace for the bootstrap playbook
+input_bootstrap_playbook_meta_playbook_name: "bootstrap_playbook" # The name of the bootstrap playbook
+input_bootstrap_playbook_meta_description: "An Ansible playbook to bootstrap and create other playbooks" # The description of the bootstrap playbook
 input_bootstrap_playbook_meta_company: "Labo-CBZ"
+
 input_bootstrap_playbook_tags:
-  - "UNIX"
-  - "Ansible"
-  - "Shell"
-  - "PHP"
+- "Ansible" # Tags for the bootstrap playbook
+- "Debian"
+- "Boilerplate"
+- "Bootstrap"
+- "Molecule"
+
 ```
 
 ## Architectural Decisions Records
