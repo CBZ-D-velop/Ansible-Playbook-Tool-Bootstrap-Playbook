@@ -16,7 +16,7 @@
         bootstrap_playbook_base_path: "{{ input_bootstrap_playbook_base_path }}"
         bootstrap_playbook_meta_playbook_name: "{{ input_bootstrap_playbook_meta_playbook_name }}"
         bootstrap_playbook_meta_namespace: "{{ input_bootstrap_playbook_meta_namespace }}"
-        bootstrap_playbook_tags: "{{ input_bootstrap_playbook_technologies }}"
+        bootstrap_playbook_tags: "{{ input_bootstrap_playbook_tags }}"
         bootstrap_playbook_meta_company: "{{ input_bootstrap_playbook_meta_company }}"
       ansible.builtin.include_role:
         name: "tool.bootstrap_playbook"
