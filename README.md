@@ -118,7 +118,7 @@ To install this playbook, just copy/import this playbook or raw file into your f
 # From AWX / Tower
 ---
 
-input_bootstrap_playbook_user: "lordrobincbz" # The user for the bootstrap playbook
+input_bootstrap_playbook_user: "root" # The user for the bootstrap playbook
 input_bootstrap_playbook_base_path: "../../bootstraped_playbooks" # The base path for the playbooks, relative to the playbook location
 
 input_bootstrap_playbook_meta_author: "Lord Robin Crombez" # The author of the bootstrap playbook
