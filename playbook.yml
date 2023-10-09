@@ -18,7 +18,6 @@
         bootstrap_playbook_meta_author: "{{ input_bootstrap_playbook_meta_author }}"
         bootstrap_playbook_meta_namespace: "{{ input_bootstrap_playbook_meta_namespace }}"
         bootstrap_playbook_meta_playbook_name: "{{ input_bootstrap_playbook_meta_playbook_name }}"
-        bootstrap_playbook_meta_playbook_name: "{{ input_bootstrap_playbook_meta_playbook_name }}"
         bootstrap_playbook_meta_description: "{{ input_bootstrap_playbook_meta_description }}"
         bootstrap_playbook_meta_company: "{{ input_bootstrap_playbook_meta_company }}"
         bootstrap_playbook_tags: "{{ input_bootstrap_playbook_tags }}"
