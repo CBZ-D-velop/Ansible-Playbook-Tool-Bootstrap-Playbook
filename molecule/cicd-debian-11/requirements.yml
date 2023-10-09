@@ -5,4 +5,4 @@
 
 - name: "tool.bootstrap_playbook"
   src: "https://github.com/CBZ-D-velop/Ansible-Role-Tool-Bootstrap-Playbook.git"
-  version: "1.0"
+  version: "2.0"
