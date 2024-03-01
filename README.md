@@ -118,22 +118,6 @@ To install this playbook, just copy/import this playbook or raw file into your f
 # From AWX / Tower
 ---
 
-input_bootstrap_playbook_user: "root" # The user for the bootstrap playbook
-input_bootstrap_playbook_base_path: "../../bootstraped_playbooks" # The base path for the playbooks, relative to the playbook location
-
-input_bootstrap_playbook_meta_author: "Lord Robin Crombez" # The author of the bootstrap playbook
-input_bootstrap_playbook_meta_namespace: "tool" # The namespace for the bootstrap playbook
-input_bootstrap_playbook_meta_playbook_name: "bootstrap_playbook" # The name of the bootstrap playbook
-input_bootstrap_playbook_meta_description: "An Ansible playbook to bootstrap and create other playbooks" # The description of the bootstrap playbook
-input_bootstrap_playbook_meta_company: "Labo-CBZ"
-
-input_bootstrap_playbook_tags:
-- "Ansible" # Tags for the bootstrap playbook
-- "Debian"
-- "Boilerplate"
-- "Bootstrap"
-- "Molecule"
-
 ```
 
 ## Architectural Decisions Records
@@ -160,6 +144,12 @@ Here you can put your change to keep a trace of your work and decisions.
 * Molecule now use remote Docker image by Lord Robin Crombez
 * Molecule now use custom Docker image in CI/CD by env vars
 * New CICD with needs and optimization
+
+### 2024-03-01: Remastered
+
+* Imported new CICD
+* Rework global on readme
+* Rename of vars __
 
 ## Authors
 
