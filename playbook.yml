@@ -15,6 +15,7 @@
         bootstrap_playbook__base_path: "{{ input_bootstrap_playbook__base_path }}"
         bootstrap_playbook__meta_author: "{{ input_bootstrap_playbook__meta_author }}"
         bootstrap_playbook__meta_namespace: "{{ input_bootstrap_playbook__meta_namespace }}"
+        bootstrap_playbook__meta_playbook_name: "{{ input_bootstrap_playbook__meta_playbook_name }}"
         bootstrap_playbook__meta_role_name: "{{ input_bootstrap_playbook__meta_role_name }}"
         bootstrap_playbook__meta_description: "{{ input_bootstrap_playbook__meta_description }}"
         bootstrap_playbook__meta_company: "{{ input_bootstrap_playbook__meta_company }}"

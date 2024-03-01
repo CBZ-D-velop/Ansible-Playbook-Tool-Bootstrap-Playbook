@@ -1,6 +1,6 @@
 galaxy_info:
   author: "Lord Robin Crombez"
-  namespace: "playbook"
+  namespace: "tool"
   role_name: "bootstrap_playbook"
   description: "An Ansible role to bootstrap and create other playbooks."
   company: "CBZ D-velop"
